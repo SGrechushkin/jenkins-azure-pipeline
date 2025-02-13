@@ -8,17 +8,17 @@ pipeline {
         }
         stage('Terraform Init') {
             steps {
-                sh 'terraform init'
+                sh 'cd terraform && terraform init'
             }
         }
         stage('Terraform Apply') {
             steps {
-                sh 'terraform apply -auto-approve'
+                sh 'cd terraform && terraform apply -auto-approve'
             }
         }
         stage('Ansible Setup') {
             steps {
-                sh 'ansible-playbook ansible/playbook.yml'
+                sh 'cd ansible && ansible-playbook playbook.yml'
             }
         }
     }
