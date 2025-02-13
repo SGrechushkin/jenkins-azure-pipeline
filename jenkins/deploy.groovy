@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/SGrechushkin/jenkins-azure-pipeline'
+                git branch: 'main', url: 'https://github.com/SGrechushkin/jenkins-azure-pipeline'
             }
         }
         stage('Terraform Init') {
