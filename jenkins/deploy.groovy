@@ -15,7 +15,7 @@ pipeline {
             steps {
                 sh '''
                 cd terraform
-                terraform apply -auto-approve -var="subscription_id=${ARM_SUBSCRIPTION_ID}"
+                terraform apply -auto-approve
                 '''
             }
         }
