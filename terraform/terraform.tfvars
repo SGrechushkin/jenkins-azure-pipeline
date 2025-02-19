@@ -1,0 +1,1 @@
+subscription_id = "ddc43207-b8a3-4791-bfa3-e90000782e7e"
