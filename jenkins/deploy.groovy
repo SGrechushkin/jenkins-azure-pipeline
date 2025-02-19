@@ -13,7 +13,10 @@ pipeline {
         }
         stage('Terraform Apply') {
             steps {
-                sh 'cd terraform && terraform apply -auto-approve'
+                sh '''
+                cd terraform
+                terraform apply -auto-approve -var="subscription_id=${ARM_SUBSCRIPTION_ID}"
+                '''
             }
         }
         stage('Ansible Setup') {
