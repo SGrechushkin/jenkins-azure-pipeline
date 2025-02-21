@@ -3,3 +3,21 @@ variable "subscription_id" {
   type        = string
   sensitive   = true
 }
+
+variable "client_id" {
+  description = "Azure Service Principal Client ID"
+  type        = string
+  sensitive   = true
+}
+
+variable "client_secret" {
+  description = "Azure Service Principal Client Secret"
+  type        = string
+  sensitive   = true
+}
+
+variable "tenant_id" {
+  description = "Azure Tenant ID"
+  type        = string
+  sensitive   = true
+}
