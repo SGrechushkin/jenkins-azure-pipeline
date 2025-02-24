@@ -3,7 +3,7 @@ pipeline {
     environment {
         // Задайте тут змінні середовища для ваших Azure credentials, якщо потрібно
         AZURE_CLIENT_ID = credentials('a82541c6-ff6d-41f1-b707-223bf98238a0')  // Приклад для string credentials
-        AZURE_CLIENT_SECRET = credentials('a82541c6-ff6d-41f1-b707-223bf98238a0')
+        AZURE_CLIENT_SECRET = credentials('a82541c6-ff6d-41f1-b707-223bf98238a0') //ghb
     }
     stages {
         stage('Checkout Code') {
