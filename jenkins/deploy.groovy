@@ -10,7 +10,7 @@ pipeline {
             steps {
                 script {
                     withCredentials([
-                        string(credentialsId: '$a82541c6-ff6d-41f1-b707-223bf98238a0', variable: 'AZURE_SUBSCRIPTION_ID'),
+                        string(credentialsId: '$a82541c6-ff6d-41f1-b707-223bf98238a0', variable: 'AZURE_SUBSCRIPTION_ID'), // додали ID
                         string(credentialsId: '$a82541c6-ff6d-41f1-b707-223bf98238a0', variable: 'AZURE_CLIENT_ID'),
                         string(credentialsId: '$a82541c6-ff6d-41f1-b707-223bf98238a0', variable: 'AZURE_CLIENT_SECRET'),
                         string(credentialsId: '$a82541c6-ff6d-41f1-b707-223bf98238a0', variable: 'AZURE_TENANT_ID')
