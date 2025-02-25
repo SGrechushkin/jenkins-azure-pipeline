@@ -1,11 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('Checkout Code') {
+/*        stage('Checkout Code') {
             steps {
                 git branch: 'main', url: 'https://github.com/SGrechushkin/jenkins-azure-pipeline'
             }
-        }
+        }*/
         stage('Terraform Init & Apply') {
             steps {
                 script {
