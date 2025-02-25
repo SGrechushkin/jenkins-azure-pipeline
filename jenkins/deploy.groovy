@@ -22,6 +22,8 @@ pipeline {
                         export TF_VAR_client_secret=$AZURE_CLIENT_SECRET
                         export TF_VAR_tenant_id=$AZURE_TENANT_ID
                         
+                        echo "DEBUG: TF_VAR_subscription_id is set to $TF_VAR_subscription_id"
+                        
                         terraform init
                         terraform apply -auto-approve
                         '''
