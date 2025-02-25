@@ -10,10 +10,10 @@ pipeline {
             steps {
                 script {
                     withCredentials([
-                        string(credentialsId: 'azure-subscription-id', variable: 'AZURE_SUBSCRIPTION_ID'),
-                        string(credentialsId: 'azure-client-id', variable: 'AZURE_CLIENT_ID'),
-                        string(credentialsId: 'azure-client-secret', variable: 'AZURE_CLIENT_SECRET'),
-                        string(credentialsId: 'azure-tenant-id', variable: 'AZURE_TENANT_ID')
+                        string(credentialsId: '$a82541c6-ff6d-41f1-b707-223bf98238a0', variable: 'AZURE_SUBSCRIPTION_ID'),
+                        string(credentialsId: '$a82541c6-ff6d-41f1-b707-223bf98238a0', variable: 'AZURE_CLIENT_ID'),
+                        string(credentialsId: '$a82541c6-ff6d-41f1-b707-223bf98238a0', variable: 'AZURE_CLIENT_SECRET'),
+                        string(credentialsId: '$a82541c6-ff6d-41f1-b707-223bf98238a0', variable: 'AZURE_TENANT_ID')
                     ]) {
                         sh '''
                         cd terraform
