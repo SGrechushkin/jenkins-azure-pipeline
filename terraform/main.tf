@@ -1,12 +1,3 @@
-provider "azurerm" {
-  features {}
-
-  subscription_id = var.subscription_id
-  client_id       = var.client_id
-  client_secret   = var.client_secret
-  tenant_id       = var.tenant_id
-}
-
 resource "azurerm_resource_group" "rg" {
   name     = "JenkinsTestRG"
   location = "East US"
@@ -39,11 +30,11 @@ resource "azurerm_network_interface" "nic" {
 }
 
 resource "azurerm_linux_virtual_machine" "vm" {
-  name                = "JenkinsVM"
-  resource_group_name = azurerm_resource_group.rg.name
-  location            = azurerm_resource_group.rg.location
-  size                = "Standard_B1s"
-  admin_username      = "azureuser"
+  name                  = "JenkinsVM"
+  resource_group_name   = azurerm_resource_group.rg.name
+  location              = azurerm_resource_group.rg.location
+  size                  = "Standard_B1s"
+  admin_username        = "azureuser"
   network_interface_ids = [azurerm_network_interface.nic.id]
 
   admin_ssh_key {
